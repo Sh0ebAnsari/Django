@@ -15,8 +15,44 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from poll import views as poll_view
+from app import views as app_view
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('poll/',include('poll.urls')),
-]
+# urlpatterns = [
+    # path('admin/', admin.site.urls),
+    # first aproch 
+    # path('poll/',include('poll.urls')),
+    # path('app/',include('app.urls')),
+    # second aproch 
+    # path('poll/',include([
+    # path("home/cource/",poll_view.cource,name="cource-views"),
+    # path("home/fees/",poll_view.fees,name="fees-views"),
+
+    # ])),
+
+    # path('app/',include([
+    # path("app/sign_up",app_view.sign_up,name='sign-up'),
+    # path("app/login",app_view.login,name='login'),
+
+    # ])),
+
+# ]
+# poll_urll_pattern=[
+#     path("home/cource/",poll_view.cource,name="cource-views"),
+#     path("home/fees/",poll_view.fees,name="fees-views"),
+# ]
+
+# app_url_pattern=[
+#      path("app/sign_up",app_view.sign_up,name='sign-up'),
+#     path("app/login",app_view.login,name='login'),
+# ]
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('poll/', include.(poll_urll_pattern)),
+#     path('app/', include.(app_url_pattern)),
+
+# ]
+
+
+

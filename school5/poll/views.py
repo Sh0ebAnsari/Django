@@ -3,5 +3,8 @@ from django.http import HttpResponse
 # Create your views here.
 
 
-def home(request):
-    return HttpResponse("<h1>Hello python and django!!!!</h1>")
+def cource(request):
+    return HttpResponse("<h1>Hello home applicationfrom poll </h1>")
+
+def fees(request):
+    return HttpResponse("<h1>Hello index view from poll application !!!</h1>")
