@@ -1,4 +1,4 @@
-"""school6 URL Configuration
+"""school8 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,12 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from poll import views
+from pool import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("home/",views.home,name="home"),
-    path("index/",views.index,name="index"),
+    path("home/",views.home,name="home")
 ]
-
-
-
