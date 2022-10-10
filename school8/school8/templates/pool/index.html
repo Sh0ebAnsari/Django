@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        h1{
-            color:aqua;
-            border:2px solid pink;
-            padding:10px;
+        h1 {
+            color: aqua;
+            border: 2px solid pink;
+            padding: 10px;
             text-align: center;
             background-color: brown;
             border-radius: 25px;
         }
     </style>
 </head>
+
 <body>
     <h1>DTL-Django Templates Language!!!!</h1>
     <h2>The Student Name is:{{nm}}</h2>
@@ -23,8 +25,8 @@
     <h2>The Address is :{{sl}}</h2>
     <hr>
     <h2>The Student Name is:{{nm|upper}}</h2>
-    <h3>The Biography:{{bio|truncateword:4}}</h3> 
-    <h3>The Biography:{{bio|truncateword:10}}</h3> 
+    <h3>The Biography:{{bio|truncateword:4}}</h3>
+    <h3>The Biography:{{bio|truncateword:10}}</h3>
     <h3>The Biography:{{bio|upper|truncateword:10}}</h3>
     <h2>The Student Name is :{{nm|capfirst}}}</h2>
     <hr>
@@ -34,4 +36,5 @@
     <h2>the tuple :{{var|lenth}}</h2>
 
 </body>
+
 </html>
