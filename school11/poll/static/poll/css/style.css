@@ -1,0 +1,12 @@
+body{
+    background-color: grey;
+}
+
+h1{
+    color: red;
+    padding: 10px;
+    text-align: center;
+    border: 20px;
+    border-radius: 20px;
+
+}

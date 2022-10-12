@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{tl}}</title>
+    <link rel="stylesheet" href="{% static 'poll/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'poll/css/style.css' %}">
+
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="{% static 'poll/images/1.jpg'%}" alt="card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">This is my book</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Quas iste consequuntur pariatur esse dignissimos doloribus sit unde nisi! 
+                            Illo minus aut consequatur. Aut officiis odit 
+                            ducimus quam repellat rerum necessitatibus!</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="{% static 'poll/images/2.jpg'%}" alt="card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">This is my book</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Quas iste consequuntur pariatur esse dignissimos doloribus sit unde nisi! 
+                            Illo minus aut consequatur. Aut officiis odit 
+                            ducimus quam repellat rerum necessitatibus!</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="{% static 'poll/images/3.jpg'%}" alt="card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">This is my book</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Quas iste consequuntur pariatur esse dignissimos doloribus sit unde nisi! 
+                            Illo minus aut consequatur. Aut officiis odit 
+                            ducimus quam repellat rerum necessitatibus!</p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+
+
+    <h1>Course name is : {{nm}}</h1>
+    <h1>Server Language is{{ser}}</h1>
+    <h1>Client Language is:{{cl}}</h1>
+    <script src="{% static 'poll/js/bootstrap.js' %}"></script>
+    <script src="{% static 'poll/js/jquery.js' %}"></script>
+    <script src="{% static 'poll/js/popper.js' %}"></script>
+</body>
+</html>
