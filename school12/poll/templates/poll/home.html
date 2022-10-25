@@ -1,0 +1,18 @@
+{% extends 'poll/base.html'%}
+{% block title %}
+    <title>{{tl}}</title>
+{% endblock title %}
+
+{% block menubar %}
+    <nav class="nav file-column">
+        <a class="btn btn-sucess nav-link mt-1 active " href="{% url 'index' %}">index Page</a>
+        <a class="btn btn-info nav-link mt-1  " href="{% url 'course' %}">course Page</a>
+        <a class="btn btn-warning nav-link mt-1 " href="{% url 'fees' %}">fees Page</a>
+    </nav>
+{% endblock menubar %}
+
+{% block heading-1 %}
+<h2>Server side Language: {{ser}}</h2>
+<h2>Clint side Language: {{cl}}</h2>
+<h2>DATA BASE LANGUAGE: {{db}}</h2>
+{% endblock heading-1 %}

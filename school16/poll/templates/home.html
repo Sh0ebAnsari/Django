@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h2>User Registeration Form!!</h2>
+    <!-- {{form}} 
+    <hr>
+    <form action="" method="get">
+        {{form}}
+        <input type="submit" value="save">
+
+    </form> -->
+    <form action="" method = 'get'>
+        {{form.as_p}}
+        <input type="submit" value="Save">
+    </form> 
+    <!-- <hr>
+    <hr>
+
+    <form action="" method="get">
+        {{form.as_table}}
+        <input type="submit" value="Save">
+    </form> -->
+    <!-- <hr>
+    <hr>
+    <form action="" method="get">
+        {{form.as_p}}
+        <input type="submit" value="Save">
+
+    </form>  -->
+
+    <!-- <form action="" method="get">
+        {{form.as_ul}}
+        <input type="submit" value="Save">
+
+    </form> -->
+    <!-- <hr>
+    <hr>
+    <form action="" method="get">
+        {{form.user_name}}
+        {{form.email}}
+        {{form.age}}
+        {{form.password1}}
+        {{form.password2}}
+        <input type="submit" value="Save">
+    </form> -->
+
+    <!-- <hr>
+    <hr>
+    <form action="" method="get">
+        {{form.user_name.leble_tag}} {{form.user_name}} <br>
+        {{form.email.lable_tag}} {{form.email}} <br>
+        {{form.age.lable_tag}}{{form.age}} <br>
+        {{form.password1.lable_tag}}{{form.password1}} <br>
+        {{form.password2.lable_tag}}{{form.password2}} <br>
+        <input type="submit" value="Save">
+    </form> -->
+    <!-- <hr>
+    <hr>
+    <form action="" method="get">
+        {% for form in form %}
+            {{form.lable_tag}}{{form}}{{form.id_for_label}}
+            <br>
+            {{form.initial}}
+            <br> <br>
+        {% endfor %}
+        <input type="submit" value="Save">
+
+    </form> -->
+
+
+    <!-- <form action="" method="get"> novalidate> 
+        {% for form in form %}
+            {{form.label_tag}}{{form}} <br><br>
+        {% endfor %}
+        <input type="submit" value="Save">
+        {{form.username.errors}}
+        {{form.password1.error}}
+    </form> -->
+
+
+    <!-- <hr><hr>
+    <form action="" method="get">
+        {% if form.non_field_errors %}
+         {% for error in form.non_field_errors %}
+            {{error}}
+         {% endfor %}
+        {% endif %}
+
+    {% if form.field_errors %}
+        {% for error in form.field_errors %}
+            {{error}}
+        {% endfor %}
+    {% endif %}
+    {{form.as_p}}
+    <input type="submit" value="Save">
+    </form> -->
+</body>
+</html>
