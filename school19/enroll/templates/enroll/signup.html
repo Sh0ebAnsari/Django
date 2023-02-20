@@ -1,0 +1,39 @@
+{% extends 'enroll/base.html' %}
+{% block title %}
+    <title>Sign-up Form</title>
+{% endblock title %}
+{% block division-1 %}
+<div class="container">
+    <div class="row mt-4"   >
+        <div class="col-2"></div>
+        <div class="col-8">
+            <center><h2>This Account Creation Form</h2></center>
+            <form action="" method="post" novalidate>
+                {% csrf_token %}
+                {% if messages %}
+                    {% for msg in messages %}
+                        <small style="font-size:20px; padding:15px; background-color:green;">{{msg}}</small>
+                        {{msg.tags}}
+                    {% endfor %}
+                {% endif %}
+                <hr>
+                
+                {% if form.non_field_errors %}
+                    {% for error in form.non_field_errors %}
+                            <p class="error">{{error|striptags}}</p>
+                    {% endfor %}
+                {% endif %}
+
+                {% for form in form %}
+                    {{form.label_tag}}
+                        {{form}}
+                    <small class="text text-danger error" style="font-size:18px;">{{form.errors|striptags}}</small> <br><br>
+                {% endfor %}
+                <input class="btn btn-success mb-3" type="submit" value="Create">
+                <a class="btn btn-info mb-3" href="{% url 'user-login' %}">Login</a>
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+{% endblock division-1 %}

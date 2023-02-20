@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Posted Data </h1>
+
+    {% for data in data %}
+        <!-- <h3>{{data.id}}</h3> -->
+        <h3>Posted by : {{data.user}}</h3>
+        <center><h3> Subject Name : {{data.title}}</h3></center>
+        <p>
+            {{data.desc|truncatewords:50}} <br><br>
+            <b>Writtern By:  {{data.author_name}}</b>
+            <b>Publish Date :- <b>{{data.publish_date}}</b></b>
+            <small><br></small> <hr><hr>
+        </p>
+{% endfor %}
+<span class="mt-5 text text-center">
+    {% if data.has_previous %}
+        <a href="?page={{data.preious_page_number}}">Previous</a>
+    {% endif %}
+
+    <span class="text text-primary m-2">{{data.number}}</span>
+    {% if data.has_next %}
+        <a href="?page={{data.next_page_number}}">Next</a>
+    {% endif %}
+</span>
+    
+</body>
+</html>

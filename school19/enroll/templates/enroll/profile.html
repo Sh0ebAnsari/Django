@@ -1,0 +1,39 @@
+{% extends 'enroll/base.html' %}
+{% block title %}
+        <title>{{title}}</title>
+{% endblock title %}
+
+{% block profile %}
+        <div class="container-fluid">
+            {% if messages %}
+            {% for msg in messages %}
+              <p class="text text-center bg-info mt-3 p-2">{{msg}} {{msg.tags}}</p>
+              
+            {% endfor %}
+          {% endif %}  
+            <div class="row">
+                <div class="col">
+                    <a href="{% url 'user-logout' %}" class="btn btn-warning mt-2">Logout</a>
+                    <a href="{% url 'change-pass1' %}" class="btn btn-info mt-2">Password Change with old password</a>
+                    <a href="{% url 'change-pass2' %}" class="btn btn-info mt-2">Password Change with old password</a>
+                    <h1 class="text text-center bg-success mt-3 p-2">This is User profile Page of :</h1>
+                </div>
+            </div>
+        </div>
+
+        <form action="" method="post" novalidate>
+          {% csrf_token %}
+          {% if form.non_field_errors %}
+              {% for error in form.non_field_errors %}
+                {{error}}
+              {% endif %}
+
+              {% for form in form %}
+                {{form.label_tag}}
+                {{form}}
+                {{form.errors|striptags}} <br>
+              {{endfor}}
+          <input type="submit" value="update">
+        </form>
+
+{% endblock profile %}

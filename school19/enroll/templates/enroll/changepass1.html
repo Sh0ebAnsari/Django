@@ -1,0 +1,15 @@
+{% extends 'enroll/base.html' %}
+
+{% block changepass2 %}
+<div class="container mt-5">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <form action="" method="post" novalidate class="form-control">
+            {% csrf_token %}
+            <input type="submit" value="change" class="btn btn-sucess">
+            <a href="{% url 'user-login'%}" class="btn btn-danger">Cancel</a>
+        </form>
+    </div>
+    <div class="col-3"></div>
+</div>
+{% endblock changepass2 %}
